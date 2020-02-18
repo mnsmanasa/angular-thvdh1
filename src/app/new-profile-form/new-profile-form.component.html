@@ -15,5 +15,5 @@
 		<input type="text" class="form-control" id="desc"
                [(ngModel)]="model.desc" name="desc">
       </div>
-		<button type="button" class="btn btn-default" (click)="onSubmit(); profileForm.reset()">New Hero</button>
+		<button type="button" class="btn btn-default" (click)=" onSubmit(profileForm);profileForm.reset()">New Hero</button>
 </form>

@@ -8,13 +8,17 @@ import { Profile } from '../profile';
   styleUrls: ['./new-profile-form.component.css']
 })
 export class NewProfileFormComponent {
-  model = new Profile();
+  model = new Profile(null, null);
+  cardsList = [];
 
   submitted = false;
 
-  onSubmit() { 
-
-   }
+  onSubmit(data) { 
+    this.cardsList.push({
+      name: data.controls['name'].value,
+      desc: data.controls['desc'].value
+    })
+  }
 
 }
 
