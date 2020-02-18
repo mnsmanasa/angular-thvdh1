@@ -2,7 +2,7 @@
 <div class="pop-up" *ngIf='this.showPopup'>
 <div class='close-popup' (click)='this.closePopup()'>X</div>
 <new-profile-form (cards)='cardsList($event)'></new-profile-form>
-<div>
-  <cards-list></cards-list>
 </div>
+<div>
+  <cards-list [cards]='cardsListArray'></cards-list>
 </div>

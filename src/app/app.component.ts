@@ -8,13 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'test';
   showPopup = false;
+  cardsListArray = [];
 
   openPopup() {
     this.showPopup = true;
   }
 
   cardsList(cards){
-    console.log(cards)
+    this.cardsListArray.push(cards);
     this.showPopup = false;
   }
 }
