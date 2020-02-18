@@ -15,7 +15,8 @@ export class AppComponent  {
   }
 
   cardsList(cards){
-    this.cardsListArray.push(cards);
+    this.cardsListArray.push(cards[0]);
+    console.log(this.cardsListArray)
     this.showPopup = false;
   }
 }
