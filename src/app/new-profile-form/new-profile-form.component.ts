@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output  } from '@angular/core';
 
 import { Profile } from '../profile';
 
@@ -10,6 +10,7 @@ import { Profile } from '../profile';
 export class NewProfileFormComponent {
   model = new Profile(null, null);
   cardsList = [];
+  @Output() cards = new EventEmitter()
 
   submitted = false;
 
@@ -18,6 +19,7 @@ export class NewProfileFormComponent {
       name: data.controls['name'].value,
       desc: data.controls['desc'].value
     })
+    this.cards.emit(this.cardsList)
   }
 
 }

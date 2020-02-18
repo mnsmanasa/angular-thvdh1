@@ -12,4 +12,9 @@ export class AppComponent  {
   openPopup() {
     this.showPopup = true;
   }
+
+  cardsList(cards){
+    console.log(cards)
+    this.showPopup = false;
+  }
 }

@@ -1,5 +1,5 @@
 <button (click)='this.openPopup()'>+ New Profile</button>
 <div class="pop-up" *ngIf='this.showPopup'>
 <div class='close-popup' (click)='this.closePopup()'>X</div>
-<new-profile-form></new-profile-form>
+<new-profile-form (cards)='cardsList($event)'></new-profile-form>
 </div>
